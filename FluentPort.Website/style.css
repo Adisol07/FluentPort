@@ -361,11 +361,13 @@ main {
 }
 
 footer {
-    height: 84px;
     border-top: 2px solid #3772FF;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: #2d2a32ef center/cover;
 
     p {
