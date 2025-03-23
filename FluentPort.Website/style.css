@@ -380,21 +380,64 @@ footer {
 
 @media (max-width: 480px) {
     main {
+        min-height: 100vh;
+
+        section {
+            height: auto;
+            min-height: 100vh;
+        }
+
         #titleSection {
+            margin-left: 20px;
+            margin-right: 20px;
+
             h1 {
                 font-size: 64px;
-                margin-left: 20px;
-                margin-right: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
             }
         }
 
         #about {
             h2 {
                 font-size: 54px;
+                margin-bottom: 10vw;
             }
 
             p {
                 font-size: 21px;
+            }
+        }
+
+        #features {
+            h2 {
+                font-size: 54px;
+            }
+
+            p {
+                font-size: 21px;
+            }
+
+            #featuresBox {
+                gap: 5px;
+                grid-template-columns: repeat(auto-fit, 90vw);
+            }
+        }
+
+        #imagesSection {
+            h2 {
+                font-size: 54px;
+            }
+
+            #imagesBox {
+                grid-template-columns: repeat(auto-fit, 80vw);
+
+                img {
+                    width: 80vw;
+                    height: auto;
+                }
             }
         }
     }
