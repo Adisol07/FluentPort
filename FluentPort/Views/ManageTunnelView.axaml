@@ -1,0 +1,163 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.ManageTunnelView">
+        <Grid RowDefinitions="Auto * Auto"
+                Margin="10 10 10 10">
+                <StackPanel>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="LocalAddressText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Local Address: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="LocalAddressTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                TextChanged="LocalAddressTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="LocalPortText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Local Port: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="LocalPortTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                TextChanged="LocalPortTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10"
+                                IsVisible="False"
+                                x:Name="RemoteServerGrid">
+                                <TextBlock x:Name="RemoteServerText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Remote Server: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="RemoteServerTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                IsEnabled="False"
+                                                TextChanged="RemoteServerTBTextChanged" />
+                                </Grid>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10"
+                                IsVisible="False"
+                                x:Name="RemoteAddressGrid">
+                                <TextBlock x:Name="RemoteAddressText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Remote Address: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="RemoteAddressTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                IsEnabled="False"
+                                                TextChanged="RemoteAddressTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10"
+                                IsVisible="False"
+                                x:Name="RemotePortGrid">
+                                <TextBlock x:Name="RemotePortText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Remote Port: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="RemotePortTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                IsEnabled="False"
+                                                TextChanged="RemotePortTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="CreatedAtText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Created at: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="CreatedAtTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                IsEnabled="False"
+                                                TextChanged="CreatedAtTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Button x:Name="SaveBtn"
+                                Click="SaveBtnClicked"
+                                Classes="SubmitBtn"
+                                Margin="0 0 0 10"
+                                IsVisible="False">Save</Button>
+                        <TextBlock x:Name="SaveMsgText"
+                                IsVisible="False"
+                                FontSize="18"
+                                FontWeight="Medium" />
+                        <!--<StackPanel
+                        Orientation="Horizontal">-->
+                        <!--        <TextBox Watermark="Subdomain"-->
+                        <!--                x:Name="SubdomainTB"-->
+                        <!--                MaxLength="24"-->
+                        <!--                Width="220"-->
+                        <!--                VerticalAlignment="Center" />-->
+                        <!--        <TextBlock FontSize="24"-->
+                        <!--                FontWeight="Medium"-->
+                        <!--                Text=".fluentport.com"-->
+                        <!--                VerticalAlignment="Center" />-->
+                        <!--        <Button x:Name="AssignSubdomainBtn"-->
+                        <!--                Click="AssignSubdomainBtnClicked"-->
+                        <!--                Classes="SubmitBtn RedBtn"-->
+                        <!--                Margin="0 0 10 0">Assign</Button>-->
+                        <!--</StackPanel>-->
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                        Grid.Row="2">
+                        <Button x:Name="RemoveBtn"
+                                Click="RemoveBtnClicked"
+                                Classes="SubmitBtn RedBtn"
+                                Margin="0 0 10 0">Delete</Button>
+                </StackPanel>
+        </Grid>
+</UserControl>

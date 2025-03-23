@@ -1,0 +1,58 @@
+# Ignore Visual Studio specific files
+.vs/
+*.user
+*.suo
+*.sln.cache
+*.VC.db
+
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+project.lock.json
+package-lock.json
+
+# Ignore user-specific settings
+*.vscode/
+*.launch
+*.code-workspace
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Ignore Rider / JetBrains IDE
+.idea/
+*.iml
+
+# Ignore compiled DLLs & executables
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.idb
+*.lib
+*.exp
+
+# Ignore ReSharper / Rider settings
+*.sln.DotSettings
+*.sln.DotSettings.user
+
+# Ignore test results
+TestResults/
+*.trx
+*.coverage
+*.coverlet/
+coverage/
+
+# Ignore publish artifacts
+publish/
+dist/

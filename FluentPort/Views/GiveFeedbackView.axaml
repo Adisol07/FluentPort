@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.GiveFeedbackView">
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <TextBlock Text="Send us your feedback!"
+                        FontSize="64"
+                        FontWeight="Black"
+                        Margin="0 0 0 2"
+                        HorizontalAlignment="Center" />
+                <TextBlock Foreground="Gray"
+                        FontSize="24"
+                        FontWeight="Medium"
+                        TextWrapping="Wrap"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        xml:space="preserve">
+We welcome any feedback, any message you might have towards us.
+You can write here any feature ideas, report problems or any other message.
+                </TextBlock>
+                <TextBox Watermark="Your message"
+                        x:Name="MessageTB"
+                        MaxLength="5000"
+                        TextWrapping="Wrap"
+                        AcceptsReturn="True"
+                        Height="150"
+                        Classes="DefaultTB" />
+                <Button Content="Send"
+                        x:Name="SendBtn"
+                        HorizontalAlignment="Center"
+                        Classes="SubmitBtn"
+                        Click="SendBtnClicked" />
+                <TextBlock Text="result.message"
+                        FontSize="18"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        IsVisible="False"
+                        x:Name="ResultMessageText" />
+        </StackPanel>
+</UserControl>

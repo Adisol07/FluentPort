@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.AddTunnelView">
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <TextBlock Text="Add new tunnel"
+                        FontSize="64"
+                        FontWeight="Black"
+                        Margin="0 0 0 10"
+                        HorizontalAlignment="Center" />
+                <StackPanel Orientation="Horizontal">
+                        <TextBox Watermark="Local connection"
+                                x:Name="LocalTB"
+                                MaxLength="50"
+                                Classes="DefaultTB"
+                                Margin="0" />
+                        <Button Content="?"
+                                Classes="AutoBtn"
+                                x:Name="LocalConnectionHelpBtn"
+                                Click="LocalConnectionHelpBtnClicked" />
+                </StackPanel>
+                <ComboBox x:Name="LocationCB"
+                        SelectionChanged="LocationCBSelectionChanged"
+                        IsVisible="False"
+                        Classes="DefaultCB" />
+                <Button Content="Create"
+                        x:Name="CreateBtn"
+                        HorizontalAlignment="Center"
+                        Classes="SubmitBtn"
+                        Click="CreateBtnClicked" />
+                <TextBlock Text="result.message"
+                        FontSize="18"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        IsVisible="False"
+                        x:Name="ResultMessageText" />
+                <TextBlock Text="! You are going to be billed for this tunnel !"
+                        FontSize="18"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        IsVisible="False"
+                        x:Name="BillingMessageText" />
+        </StackPanel>
+</UserControl>

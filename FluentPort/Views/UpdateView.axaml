@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.UpdateView">
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <TextBlock Text="Software Update"
+                        FontSize="64"
+                        FontWeight="Black"
+                        Margin="0 0 0 5"
+                        HorizontalAlignment="Center" />
+                <TextBlock x:Name="VersionText"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        Foreground="Gray"
+                        Margin="0 0 0 10"
+                        HorizontalAlignment="Center" />
+                <Button Content="Update"
+                        x:Name="UpdateBtn"
+                        HorizontalAlignment="Center"
+                        Classes="SubmitBtn"
+                        Click="UpdateBtnClicked" />
+                <TextBlock FontSize="18"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        IsVisible="False"
+                        x:Name="ResultMessageText" />
+        </StackPanel>
+</UserControl>
