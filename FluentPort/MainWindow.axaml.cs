@@ -20,7 +20,7 @@ public partial class MainWindow : Window
 {
     private static bool is_online = true;
 
-    public static string AppPath;
+    public static string? AppPath;
     public static MainWindow? Instance;
     public static TunnelsView? TunnelsViewInstance;
     public static SettingsView? SettingsViewInstance;
