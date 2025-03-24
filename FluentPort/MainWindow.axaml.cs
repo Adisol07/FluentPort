@@ -18,8 +18,6 @@ namespace FluentPort;
 
 public partial class MainWindow : Window
 {
-    private static bool is_online = true;
-
     public static string? AppPath;
     public static MainWindow? Instance;
     public static TunnelsView? TunnelsViewInstance;
@@ -31,6 +29,8 @@ public partial class MainWindow : Window
     public static GiveFeedbackView? GiveFeedbackViewInstance;
     public static OfflineOverlay? OfflineOverlayInstance;
     public static ClosingOverlay? ClosingOverlayInstance;
+
+    private static bool is_online = true;
     public static bool IsOnline
     {
         get => is_online;
