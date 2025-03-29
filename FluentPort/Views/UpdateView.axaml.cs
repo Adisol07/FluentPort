@@ -30,14 +30,25 @@ public partial class UpdateView : UserControl
         InitializeComponent();
     }
 
-    public void SetVersion(string currentVersion, string newVersion, string downloadLink, string appPath, string userPath)
+    public void SetVersion(string currentVersion, APIDetails details, string appPath, string userPath)
     {
-        DownloadLink = downloadLink;
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && (RuntimeInformation.ProcessArchitecture == Architecture.X86 || RuntimeInformation.ProcessArchitecture == Architecture.X64))
+        {
+            DownloadLink = details.LatestDownload_win_x64;
+        }
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && (RuntimeInformation.ProcessArchitecture == Architecture.Arm || RuntimeInformation.ProcessArchitecture == Architecture.Arm64))
+        {
+            DownloadLink = details.LatestDownload_win_arm64;
+        }
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        {
+            DownloadLink = details.LatestDownload_osx_arm64;
+        }
         AppPath = appPath;
         UserPath = userPath;
         CurrentVersion = currentVersion;
-        NewVersion = newVersion;
-        VersionText.Text = currentVersion + " --> " + newVersion;
+        NewVersion = details.Version;
+        VersionText.Text = currentVersion + " --> " + details.Version;
     }
 
     private async void UpdateBtnClicked(object? sender, RoutedEventArgs e)

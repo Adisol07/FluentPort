@@ -36,7 +36,9 @@ app.MapControllers();
 APIDetails details = new APIDetails()
 {
     Version = "0.1.1",
-    LatestDownload = "https://dl.dropboxusercontent.com/scl/fi/lxuw6qufmwsbowsovfbc4/osx-arm64_0.1.0.zip?rlkey=sllpcwfrq920vs7ducuqrfyq1&amp;st=imv58rwx&amp;dl=1"
+    LatestDownload_osx_arm64 = "https://dl.dropboxusercontent.com/scl/fi/lxuw6qufmwsbowsovfbc4/osx-arm64_0.1.0.zip?rlkey=sllpcwfrq920vs7ducuqrfyq1&amp;st=imv58rwx&amp;dl=1",
+    LatestDownload_win_arm64 = "https://dl.dropboxusercontent.com/scl/fi/lxuw6qufmwsbowsovfbc4/osx-arm64_0.1.0.zip?rlkey=sllpcwfrq920vs7ducuqrfyq1&amp;st=imv58rwx&amp;dl=1",
+    LatestDownload_win_x64 = "https://dl.dropboxusercontent.com/scl/fi/lxuw6qufmwsbowsovfbc4/osx-arm64_0.1.0.zip?rlkey=sllpcwfrq920vs7ducuqrfyq1&amp;st=imv58rwx&amp;dl=1"
 };
 Logger.OnLog += (log) =>
 {

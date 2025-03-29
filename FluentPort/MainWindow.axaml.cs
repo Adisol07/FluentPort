@@ -75,9 +75,9 @@ public partial class MainWindow : Window
 
         OfflineOverlayInstance = new OfflineOverlay();
 
-        Task<(string currVer, string newVer, string downloadLink)> check_version_task = Task.Run(check_version);
+        Task<(APIDetails api_details, bool update, bool error)> check_version_task = Task.Run(check_version);
         Task.WhenAll(check_version_task);
-        if (string.IsNullOrEmpty(check_version_task.Result.currVer) && string.IsNullOrEmpty(check_version_task.Result.newVer) && string.IsNullOrEmpty(check_version_task.Result.downloadLink))
+        if (!check_version_task.Result.update)
         {
             check_if_mobile_network();
             NetworkChange.NetworkAvailabilityChanged += (sender, args) =>
@@ -125,7 +125,7 @@ public partial class MainWindow : Window
 
             auto_login();
         }
-        else if (check_version_task.Result.currVer == "ERROR" && check_version_task.Result.newVer == "ERROR" && check_version_task.Result.downloadLink == "ERROR")
+        else if (check_version_task.Result.error)
         {
             UnavailableView unavailable_view = new UnavailableView();
             SwitchView(unavailable_view);
@@ -133,7 +133,7 @@ public partial class MainWindow : Window
         else
         {
             UpdateViewInstance = new UpdateView();
-            UpdateViewInstance.SetVersion(check_version_task.Result.currVer, check_version_task.Result.newVer, check_version_task.Result.downloadLink, AppDomain.CurrentDomain.BaseDirectory, AppPath + "/download");
+            UpdateViewInstance.SetVersion(Utils.Version, check_version_task.Result.api_details, AppDomain.CurrentDomain.BaseDirectory, AppPath + "/download");
             SwitchView(UpdateViewInstance);
         }
     }
@@ -313,7 +313,7 @@ public partial class MainWindow : Window
         return "Unknown";
     }
 
-    private async Task<(string currVer, string newVer, string downloadLink)> check_version()
+    private async Task<(APIDetails api_details, bool update, bool error)> check_version()
     {
         try
         {
@@ -324,18 +324,18 @@ public partial class MainWindow : Window
             {
                 APIDetails? details = await response.Content.ReadFromJsonAsync<APIDetails>();
                 if (details!.Version == Utils.Version)
-                    return ("", "", "");
+                    return (null!, false, false);
 
-                return (Utils.Version!, details!.Version!, details!.LatestDownload!);
+                return (details, true, false);
             }
             else
             {
-                return (null!, null!, null!);
+                return (null!, false, true);
             }
         }
         catch
         {
-            return ("ERROR", "ERROR", "ERROR");
+            return (null!, false, true);
         }
     }
 }
