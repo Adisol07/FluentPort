@@ -1,0 +1,44 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="FluentPort.Overlays.AddTunnelHelpOverlay">
+    <Border VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        CornerRadius="8"
+        Background="{StaticResource RaisinBlackColor}"
+        Padding="18">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Center">
+                <TextBlock Foreground="White"
+                    FontSize="48"
+                    FontWeight="Bold">Local connection</TextBlock>
+            </StackPanel>
+            <Grid ColumnDefinitions="0.5* 2* 0.5*">
+                <TextBlock Foreground="White"
+                    FontSize="22"
+                    FontWeight="Medium"
+                    TextWrapping="Wrap"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    xml:space="preserve">
+You need to put there at least the port of the service/server running on your local machine. 
+E.g web server (HTTP): "80", minecraft server: "25565", etc.
+
+If you want you can also put there the local address (e.g: "127.0.0.1:80"), but that is unnecessary
+                </TextBlock>
+            </Grid>
+            <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0 10 0 0">
+                <Button x:Name="ContinueBtn"
+                    Classes="MBtn"
+                    Click="ContinueBtnClicked">Continue</Button>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

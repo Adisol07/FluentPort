@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="FluentPort.Overlays.AllServersAreFullOverlay">
+    <Border VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        CornerRadius="8"
+        Background="{StaticResource RaisinBlackColor}"
+        Padding="18">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Center">
+                <TextBlock Foreground="White"
+                    FontSize="32"
+                    FontWeight="Bold">We are sorry :(</TextBlock>
+            </StackPanel>
+            <TextBlock Foreground="White"
+                FontSize="22"
+                FontWeight="Medium"
+                TextWrapping="Wrap"
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                xml:space="preserve">
+We are experiencing high usage load.
+All of our servers run out of capacity.
+Please wait a bit and try again later.
+Thank you for your patience!
+                </TextBlock>
+            <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0 10 0 0">
+                <Button x:Name="ContinueBtn"
+                    Classes="MBtn"
+                    Click="ContinueBtnClicked">Continue</Button>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

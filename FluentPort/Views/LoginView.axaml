@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.LoginView">
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <TextBlock Text="Login"
+                        FontSize="64"
+                        FontWeight="Black"
+                        Margin="0 0 0 10"
+                        HorizontalAlignment="Center" />
+                <TextBox Watermark="E-mail address"
+                        x:Name="EmailTB"
+                        MaxLength="250"
+                        Classes="DefaultTB" />
+                <TextBox Watermark="Password"
+                        PasswordChar="*"
+                        x:Name="PasswordTB"
+                        MaxLength="250"
+                        Classes="DefaultTB" />
+                <CheckBox x:Name="KeepSignedCKB"
+                        IsChecked="True">Keep me signed in</CheckBox>
+                <Button Content="Sign In"
+                        x:Name="LoginBtn"
+                        HorizontalAlignment="Center"
+                        Classes="SubmitBtn"
+                        Click="LoginBtnClicked" />
+                <TextBlock Text="result.message"
+                        FontSize="18"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        IsVisible="False"
+                        x:Name="ResultMessageText" />
+                <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <TextBlock Text="New here? Create an account here: "
+                                FontSize="18"
+                                FontWeight="Medium"
+                                VerticalAlignment="Center" />
+                        <Button x:Name="SignUpLink"
+                                Click="SignUpLinkClicked"
+                                Background="Transparent">
+                                <TextBlock Text="Sign Up"
+                                        FontSize="18"
+                                        FontWeight="Medium"
+                                        Foreground="{StaticResource PrimaryColor}"
+                                        Cursor="Hand" />
+                        </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <TextBlock Text="Forgot your password? "
+                                FontSize="18"
+                                FontWeight="Medium"
+                                VerticalAlignment="Center" />
+                        <Button x:Name="ResetPasswordLink"
+                                Click="ResetPasswordLinkClicked"
+                                Background="Transparent">
+                                <TextBlock Text="Reset password"
+                                        FontSize="18"
+                                        FontWeight="Medium"
+                                        Foreground="{StaticResource PrimaryColor}"
+                                        Cursor="Hand" />
+                        </Button>
+                </StackPanel>
+        </StackPanel>
+</UserControl>

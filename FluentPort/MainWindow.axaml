@@ -1,0 +1,99 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="1200" Height="675"
+        CanResize="True" WindowStartupLocation="CenterScreen"
+        x:Class="FluentPort.MainWindow"
+        Title="FluentPort"
+        Icon="avares://FluentPort/Assets/app.ico"
+        Background="{StaticResource RaisinBlackColor}">
+        <Grid>
+                <ContentControl>
+                        <Grid RowDefinitions="Auto *">
+                                <Border BorderBrush="{StaticResource PrimaryColor}"
+                                        BorderThickness="0 0 0 2"
+                                        Grid.Row="0"
+                                        IsVisible="False"
+                                        x:Name="HeaderBorder">
+                                        <Grid Height="80"
+                                                ColumnDefinitions="Auto * Auto">
+                                                <Button Grid.Column="0"
+                                                        Click="AccountBtnClicked"
+                                                        Background="Transparent"
+                                                        Margin="10 0 0 0"
+                                                        CornerRadius="16">
+                                                        <StackPanel Orientation="Horizontal"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                Cursor="Hand">
+                                                                <Border Width="48"
+                                                                        Height="48"
+                                                                        CornerRadius="48"
+                                                                        ClipToBounds="True"
+                                                                        Background="White"
+                                                                        x:Name="ProfilePictureBorder">
+                                                                        <Image
+                                                                                x:Name="ProfilePicture"
+                                                                                Width="48"
+                                                                                Height="48"
+                                                                                IsVisible="False" />
+                                                                </Border>
+                                                                <StackPanel Orientation="Vertical"
+                                                                        VerticalAlignment="Center">
+                                                                        <TextBlock
+                                                                                x:Name="ProfileRole"
+                                                                                Text="Loading.."
+                                                                                VerticalAlignment="Center"
+                                                                                FontSize="12"
+                                                                                Margin="10 0 0 0"
+                                                                                Padding="0"
+                                                                                IsVisible="False"
+                                                                                Foreground="Gray" />
+                                                                        <TextBlock
+                                                                                x:Name="ProfileText"
+                                                                                Text="Loading.."
+                                                                                VerticalAlignment="Center"
+                                                                                FontSize="24"
+                                                                                FontWeight="Medium"
+                                                                                Margin="10 0 0 0" />
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                </Button>
+                                                <StackPanel Grid.Column="0"
+                                                        Grid.ColumnSpan="3"
+                                                        Orientation="Horizontal"
+                                                        HorizontalAlignment="Center">
+                                                        <Button Classes="MenuBtn"
+                                                                x:Name="TunnelsMenuBtn"
+                                                                Click="TunnelsMenuBtnClicked">
+                                                                Tunnels</Button>
+                                                        <Button Classes="MenuBtn"
+                                                                x:Name="SettingsMenuBtn"
+                                                                Click="SettingsMenuBtnClicked">
+                                                                Settings</Button>
+                                                </StackPanel>
+                                                <StackPanel Grid.Column="2"
+                                                        VerticalAlignment="Center"
+                                                        Margin="0 0 10 0">
+                                                        <Button Classes="MenuBtn"
+                                                                x:Name="AddTunnelBtn"
+                                                                Click="AddTunnelBtnClicked"
+                                                                IsVisible="False">Add Tunnel</Button>
+                                                </StackPanel>
+                                        </Grid>
+                                </Border>
+
+                                <Grid Grid.Row="1"
+                                        x:Name="MainFrame"></Grid>
+                        </Grid>
+                </ContentControl>
+                <Border x:Name="OverlayBorder"
+                        Background="#80000000"
+                        IsVisible="False">
+                        <Grid x:Name="Overlay">
+                        </Grid>
+                </Border>
+        </Grid>
+</Window>

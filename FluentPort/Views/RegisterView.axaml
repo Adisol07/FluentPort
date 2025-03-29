@@ -1,0 +1,87 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.RegisterView">
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <TextBlock Text="Register"
+                        FontSize="64"
+                        FontWeight="Black"
+                        Margin="0 0 0 10"
+                        HorizontalAlignment="Center" />
+                <TextBox Watermark="Username"
+                        x:Name="UsernameTB"
+                        MaxLength="64"
+                        Classes="DefaultTB" />
+                <TextBox Watermark="E-mail address"
+                        x:Name="EmailTB"
+                        MaxLength="250"
+                        Classes="DefaultTB" />
+                <TextBox Watermark="Password"
+                        PasswordChar="*"
+                        x:Name="PasswordTB"
+                        MaxLength="250"
+                        Classes="DefaultTB" />
+                <CheckBox x:Name="KeepSignedCKB"
+                        IsChecked="True"
+                        FontSize="18">Keep me signed in</CheckBox>
+                <CheckBox x:Name="TermsCKB">
+                        <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                                <TextBlock Text="I agree to the "
+                                        FontSize="18"
+                                        FontWeight="Medium"
+                                        VerticalAlignment="Center" />
+                                <Button x:Name="TermsLink"
+                                        Click="TermsClicked"
+                                        Background="Transparent">
+                                        <TextBlock Text="Terms Of Service"
+                                                FontSize="18"
+                                                FontWeight="Medium"
+                                                Foreground="{StaticResource PrimaryColor}"
+                                                Cursor="Hand" />
+                                </Button>
+                                <TextBlock Text=" and "
+                                        VerticalAlignment="Center" />
+                                <Button x:Name="PrivacyLink"
+                                        Click="PrivacyClicked"
+                                        Background="Transparent">
+                                        <TextBlock Text="Privacy Policy"
+                                                Foreground="{StaticResource PrimaryColor}"
+                                                Cursor="Hand"
+                                                FontSize="18" />
+                                </Button>
+                        </StackPanel>
+                </CheckBox>
+                <Button Content="Sign Up"
+                        x:Name="RegisterBtn"
+                        HorizontalAlignment="Center"
+                        Classes="SubmitBtn"
+                        Click="RegisterBtnClicked" />
+                <TextBlock Text="result.message"
+                        FontSize="18"
+                        FontWeight="Medium"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        IsVisible="False"
+                        x:Name="ResultMessageText" />
+                <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <TextBlock Text="Do you already have an account? Login here: "
+                                FontSize="18"
+                                FontWeight="Medium"
+                                VerticalAlignment="Center" />
+                        <Button x:Name="SignInLink"
+                                Click="SignInLinkClicked"
+                                Background="Transparent">
+                                <TextBlock Text="Sign In"
+                                        FontSize="18"
+                                        FontWeight="Medium"
+                                        Foreground="{StaticResource PrimaryColor}"
+                                        Cursor="Hand" />
+                        </Button>
+                </StackPanel>
+        </StackPanel>
+</UserControl>

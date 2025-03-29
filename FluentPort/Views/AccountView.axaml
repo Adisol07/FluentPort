@@ -1,0 +1,101 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FluentPort.Views.AccountView">
+        <Grid RowDefinitions="Auto * Auto"
+                Margin="10 10 10 10">
+                <StackPanel>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="UsernameText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Username: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="UsernameTB"
+                                                MaxLength="50"
+                                                Margin="0"
+                                                TextChanged="UsernameTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="EmailText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="E-Mail Address: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="EmailTB"
+                                                MaxLength="250"
+                                                Margin="0"
+                                                TextChanged="EmailTBTextChanged" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="RoleText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Role: "
+                                        IsVisible="False"
+                                        Grid.Column="0"
+                                        VerticalAlignment="Center" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center">
+                                        <TextBox Watermark=""
+                                                x:Name="RoleTB"
+                                                MaxLength="250"
+                                                IsEnabled="False"
+                                                IsVisible="False"
+                                                Margin="0" />
+                                </Grid>
+                        </Grid>
+                        <Button x:Name="SaveInfoBtn"
+                                Click="SaveInfoBtnClicked"
+                                Classes="SubmitBtn"
+                                Margin="0 0 0 10"
+                                IsVisible="False">Save</Button>
+                        <TextBlock x:Name="SaveMsgText"
+                                IsVisible="False"
+                                FontSize="18"
+                                FontWeight="Medium" />
+                </StackPanel>
+                <WrapPanel Orientation="Horizontal"
+                        Grid.Row="2"
+                        Margin="0 0 0 -10">
+                        <Button x:Name="SignOutBtn"
+                                Click="SignOutBtnClicked"
+                                Classes="SubmitBtn"
+                                Margin="0 0 10 10">Sign Out</Button>
+                        <Button x:Name="ChangeProfileIconBtn"
+                                Click="ChangeProfileIconBtnClicked"
+                                Classes="SubmitBtn"
+                                Margin="0 0 10 10">Change profile picture</Button>
+                        <Button x:Name="GiveFeedbackBtn"
+                                Click="GiveFeedbackBtnClicked"
+                                Classes="SubmitBtn"
+                                Margin="0 0 10 10">Give feedback</Button>
+                        <Button x:Name="ChangePasswordBtn"
+                                Click="ChangePasswordBtnClicked"
+                                Classes="SubmitBtn"
+                                Margin="0 0 10 10">Change password</Button>
+                        <Button x:Name="RemoveBtn"
+                                Click="RemoveBtnClicked"
+                                Classes="SubmitBtn RedBtn"
+                                Margin="0 0 10 10">Delete account</Button>
+                </WrapPanel>
+        </Grid>
+</UserControl>
