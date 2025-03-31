@@ -64,7 +64,7 @@ AuthModel.Load(app_path + "/data/users");
 AuthModel.FeedbacksDir = app_path + "/data/feedbacks";
 AuthModel.EmailPassword = File.ReadAllText(app_path + "/email_password.txt").Trim();
 
-TimeSpan log_time = TimeSpan.FromMinutes(2);
+TimeSpan log_time = TimeSpan.FromMinutes(5);
 _ = Task.Run(async () =>
 {
     while (true)
