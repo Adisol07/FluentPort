@@ -19,6 +19,8 @@ namespace FluentPort;
 public partial class MainWindow : Window
 {
     public static string? AppPath;
+    public static Config? Config;
+    public static Theme? SelectedTheme;
     public static MainWindow? Instance;
     public static TunnelsView? TunnelsViewInstance;
     public static SettingsView? SettingsViewInstance;
@@ -52,10 +54,14 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         AppPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "/FluentPort/";
+        Config = new Config();
         if (!Directory.Exists(AppPath))
             Directory.CreateDirectory(AppPath);
         if (!Directory.Exists(AppPath + "/download"))
             Directory.CreateDirectory(AppPath + "/download");
+        if (!File.Exists(AppPath + "/config.json"))
+            Config.Save(AppPath + "/config.json");
+        Config = JsonSerializer.Deserialize<Config>(File.ReadAllText(AppPath + "/config.json"));
         InitializeComponent();
 
         Logger.OnLog += (log) =>
@@ -206,7 +212,6 @@ public partial class MainWindow : Window
     {
         MainWindow.Instance!.OverlayBorder.IsVisible = false;
     }
-
     public static void ReloadUserInfo()
     {
         MainWindow.Instance!.ProfileText.Text = UserInfo.Username;
@@ -238,6 +243,20 @@ public partial class MainWindow : Window
             MainWindow.Instance!.ProfilePicture.IsVisible = false;
             MainWindow.Instance!.ProfilePictureBorder.Background = Brushes.White;
         }
+    }
+    public static void LoadTheme()
+    {
+        string prev_theme = Config!.Theme;
+        if (!File.Exists(AppPath + "/themes/" + Config!.Theme! + ".json"))
+        {
+            Config!.Theme = "Dark";
+        }
+        Theme theme = JsonSerializer.Deserialize<Theme>(File.ReadAllText(AppPath + "/themes/" + Config!.Theme! + ".json"))!;
+        SelectedTheme = theme;
+
+        Instance!.Background = (IBrush)App.Current.Resources[SelectedTheme.WindowBackgroundColor];
+
+        Config!.Theme = prev_theme;
     }
 
     private void TunnelsMenuBtnClicked(object? sender, RoutedEventArgs e)

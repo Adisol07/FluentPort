@@ -80,8 +80,6 @@
             <Setter Property="Padding" Value="10 10 10 10" />
             <Setter Property="FontSize" Value="21" />
             <Setter Property="FontWeight" Value="Medium" />
-            <!--<Setter
-            Property="Width" Value="560" />-->
         </Style>
         <Style Selector="TextBox.DefaultTB, ComboBox.DefaultCB">
             <Setter Property="Width" Value="560" />

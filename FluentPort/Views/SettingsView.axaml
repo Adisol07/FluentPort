@@ -4,10 +4,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="FluentPort.Views.SettingsView">
-        <TextBlock Text="Coming Soon"
-                FontSize="64"
-                FontWeight="Bold"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Foreground="Gray" />
+        <Grid RowDefinitions="Auto * Auto"
+                Margin="10 10 10 10">
+                <StackPanel>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="ThemeText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Theme: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Stretch">
+                                        <ComboBox x:Name="ThemeCB"
+                                                SelectionChanged="ThemeCBSelectionChanged"
+                                                HorizontalAlignment="Stretch"
+                                                Margin="0" />
+                                </Grid>
+                        </Grid>
+                </StackPanel>
+        </Grid>
 </UserControl>
