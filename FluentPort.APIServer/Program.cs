@@ -35,7 +35,7 @@ app.MapControllers();
 //string app_path = AppDomain.CurrentDomain.BaseDirectory;
 APIDetails details = new APIDetails()
 {
-    Version = "0.1.1",
+    Version = "0.1.2",
     LatestDownload_osx_arm64 = "https://dl.dropboxusercontent.com/scl/fi/llp5px6qup6vkr61r3oun/osx-arm64_0.1.1.zip?rlkey=0u4d39g02deap1mc5jk4u0bu3&st=6p4ydzqa&dl=1",
     LatestDownload_win_arm64 = "https://dl.dropboxusercontent.com/scl/fi/898pr4xxq8nqnunwlevik/win-arm64_0.1.1.zip?rlkey=xu681091dxcm8gbmdv48ppx5z&st=itx4y9c5&dl=1",
     LatestDownload_win_x64 = "https://dl.dropboxusercontent.com/scl/fi/s1cavo5yiw86rxgbfz1py/win-x64_0.1.1.zip?rlkey=lflqe5pr3y5uur4bqm1li051r&st=onufj5xf&dl=1"

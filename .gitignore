@@ -1,3 +1,8 @@
+# Testing API server files
+data/
+IpInfoToken.txt
+email_password.txt
+
 # Ignore Visual Studio specific files
 .vs/
 *.user

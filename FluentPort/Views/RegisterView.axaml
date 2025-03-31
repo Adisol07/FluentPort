@@ -44,6 +44,7 @@
                                                 Cursor="Hand" />
                                 </Button>
                                 <TextBlock Text=" and "
+                                        FontSize="18"
                                         VerticalAlignment="Center" />
                                 <Button x:Name="PrivacyLink"
                                         Click="PrivacyClicked"

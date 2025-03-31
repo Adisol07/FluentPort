@@ -5,7 +5,7 @@ namespace FluentPort.SDK;
 
 public static class Utils
 {
-    public static string Version => "0.1.1";
+    public static string Version => "0.1.2";
 #if DEBUG
     public const string API_SERVER = "http://localhost:5055";
 #else
