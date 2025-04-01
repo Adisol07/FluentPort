@@ -40,7 +40,7 @@
                                         <TextBlock Text="Terms Of Service"
                                                 FontSize="18"
                                                 FontWeight="Medium"
-                                                Foreground="{StaticResource PrimaryColor}"
+                                                Foreground="{DynamicResource PrimaryColor}"
                                                 Cursor="Hand" />
                                 </Button>
                                 <TextBlock Text=" and "
@@ -50,7 +50,7 @@
                                         Click="PrivacyClicked"
                                         Background="Transparent">
                                         <TextBlock Text="Privacy Policy"
-                                                Foreground="{StaticResource PrimaryColor}"
+                                                Foreground="{DynamicResource PrimaryColor}"
                                                 Cursor="Hand"
                                                 FontSize="18" />
                                 </Button>
@@ -80,7 +80,7 @@
                                 <TextBlock Text="Sign In"
                                         FontSize="18"
                                         FontWeight="Medium"
-                                        Foreground="{StaticResource PrimaryColor}"
+                                        Foreground="{DynamicResource PrimaryColor}"
                                         Cursor="Hand" />
                         </Button>
                 </StackPanel>

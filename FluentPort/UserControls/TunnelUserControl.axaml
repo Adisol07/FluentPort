@@ -7,7 +7,7 @@
         <Border Margin="10"
                 CornerRadius="8"
                 BorderThickness="2"
-                BorderBrush="{StaticResource WhiteSmokeColor}"
+                BorderBrush="{DynamicResource WhiteSmokeColor}"
                 x:Name="TunnelBorder"
                 Height="80">
                 <Grid ColumnDefinitions="Auto Auto * Auto * Auto Auto Auto Auto"
@@ -39,7 +39,7 @@
                         <Border x:Name="ArrowMiddle"
                                 Grid.Column="3"
                                 CornerRadius="8"
-                                Background="{StaticResource PrimaryColor}"
+                                Background="{DynamicResource PrimaryColor}"
                                 IsVisible="False"
                                 Height="48">
                                 <TextBlock x:Name="ArrowStatus"

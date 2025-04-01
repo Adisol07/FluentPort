@@ -7,7 +7,7 @@
     <Border VerticalAlignment="Center"
         HorizontalAlignment="Center"
         CornerRadius="8"
-        Background="{StaticResource RaisinBlackColor}"
+        Background="{DynamicResource RaisinBlackColor}"
         Padding="18">
         <StackPanel>
             <StackPanel Orientation="Horizontal"

@@ -3,7 +3,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="FluentPort.Views.SettingsView">
+        x:Class="FluentPort.Views.SettingsView"
+        Foreground="{DynamicResource WhiteSmokeColor}">
         <Grid RowDefinitions="Auto * Auto"
                 Margin="10 10 10 10">
                 <StackPanel>
@@ -21,6 +22,24 @@
                                         HorizontalAlignment="Stretch">
                                         <ComboBox x:Name="ThemeCB"
                                                 SelectionChanged="ThemeCBSelectionChanged"
+                                                HorizontalAlignment="Stretch"
+                                                Margin="0" />
+                                </Grid>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto *"
+                                Margin="0 0 0 10">
+                                <TextBlock x:Name="LanguageText"
+                                        FontSize="24"
+                                        FontWeight="Medium"
+                                        Text="Language: "
+                                        VerticalAlignment="Center"
+                                        Grid.Column="0" />
+                                <Grid Grid.Column="1"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Stretch">
+                                        <ComboBox x:Name="LanguageCB"
+                                                SelectionChanged="LanguageCBSelectionChanged"
                                                 HorizontalAlignment="Stretch"
                                                 Margin="0" />
                                 </Grid>

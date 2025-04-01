@@ -23,8 +23,8 @@
 
         <Style Selector="Button.MenuBtn, Button.SubmitBtn, Button.MBtn, Button.AutoBtn">
             <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Foreground" Value="{StaticResource WhiteSmokeColor}" />
-            <Setter Property="BorderBrush" Value="{StaticResource WhiteSmokeColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource WhiteSmokeColor}" />
             <Setter Property="BorderThickness" Value="2" />
             <Setter Property="CornerRadius" Value="8" />
             <Setter Property="FontSize" Value="21" />
@@ -36,14 +36,14 @@
             <Setter Property="Padding" Value="20 0 20 0" />
         </Style>
         <Style Selector="Button.SelectedBtn">
-            <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
-            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
         </Style>
         <Style
             Selector="Button.MenuBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter, Button.SubmitBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter, Button.MBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter, Button.AutoBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Foreground" Value="{StaticResource PrimaryColor}" />
-            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
         <Style Selector="Button.SubmitBtn">
@@ -62,19 +62,20 @@
             Selector="Button.RedBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="Red" />
             <Setter Property="BorderBrush" Value="Red" />
-            <Setter Property="Foreground" Value="{StaticResource WhiteSmokeColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
         </Style>
         <Style
             Selector="Button.SelectedBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Background" Value="{StaticResource PrimaryColor}" />
-            <Setter Property="Foreground" Value="{StaticResource WhiteSmokeColor}" />
+            <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
         </Style>
 
 
         <Style Selector="TextBox, ComboBox">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="CornerRadius" Value="8" />
-            <Setter Property="BorderBrush" Value="{StaticResource WhiteSmokeColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource WhiteSmokeColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
             <Setter Property="BorderThickness" Value="2" />
             <Setter Property="Margin" Value="0 0 0 10" />
             <Setter Property="Padding" Value="10 10 10 10" />
@@ -87,26 +88,26 @@
         <Style
             Selector="TextBox:focus /template/ Border#PART_BorderElement, ComboBox:focus /template/ Border#PART_BorderElement">
             <Setter Property="Background" Value="Transparent" />
-            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
         </Style>
         <Style
             Selector="TextBox:pointerover /template/ Border#PART_BorderElement, ComboBox:pointerover /template/ Border#PART_BorderElement">
             <Setter Property="Background" Value="Transparent" />
-            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
 
         <Style Selector="CheckBox:unchecked /template/ Border#NormalRectangle">
-            <Setter Property="BorderBrush" Value="{StaticResource WhiteSmokeColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource WhiteSmokeColor}" />
             <Setter Property="CornerRadius" Value="4" />
             <Setter Property="BorderThickness" Value="2" />
         </Style>
         <Style Selector="CheckBox:pointerover /template/ Border#NormalRectangle">
-            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
         </Style>
         <Style Selector="CheckBox:checked /template/ Border#NormalRectangle">
-            <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}" />
-            <Setter Property="Background" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
+            <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
             <Setter Property="CornerRadius" Value="4" />
             <Setter Property="BorderThickness" Value="2" />
         </Style>

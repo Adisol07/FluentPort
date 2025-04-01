@@ -46,7 +46,7 @@
                                 <TextBlock Text="Sign Up"
                                         FontSize="18"
                                         FontWeight="Medium"
-                                        Foreground="{StaticResource PrimaryColor}"
+                                        Foreground="{DynamicResource PrimaryColor}"
                                         Cursor="Hand" />
                         </Button>
                 </StackPanel>
@@ -62,7 +62,7 @@
                                 <TextBlock Text="Reset password"
                                         FontSize="18"
                                         FontWeight="Medium"
-                                        Foreground="{StaticResource PrimaryColor}"
+                                        Foreground="{DynamicResource PrimaryColor}"
                                         Cursor="Hand" />
                         </Button>
                 </StackPanel>

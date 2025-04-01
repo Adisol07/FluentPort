@@ -6,6 +6,7 @@ namespace FluentPort;
 public class Config
 {
     public string? Theme { get; set; } = "Dark";
+    public string? Language { get; set; } = "English";
 
     public void Save(string path)
     {

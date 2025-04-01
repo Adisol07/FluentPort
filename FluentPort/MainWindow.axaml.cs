@@ -246,7 +246,7 @@ public partial class MainWindow : Window
     }
     public static void LoadTheme()
     {
-        string prev_theme = Config!.Theme;
+        string prev_theme = Config!.Theme!;
         if (!File.Exists(AppPath + "/themes/" + Config!.Theme! + ".json"))
         {
             Config!.Theme = "Dark";
@@ -254,7 +254,11 @@ public partial class MainWindow : Window
         Theme theme = JsonSerializer.Deserialize<Theme>(File.ReadAllText(AppPath + "/themes/" + Config!.Theme! + ".json"))!;
         SelectedTheme = theme;
 
-        Instance!.Background = (IBrush)App.Current.Resources[SelectedTheme.WindowBackgroundColor];
+        App.Current!.Resources["PrimaryColor"] = new SolidColorBrush(Color.Parse(SelectedTheme!.PrimaryColor!));
+        App.Current!.Resources["SecondaryColor"] = new SolidColorBrush(Color.Parse(SelectedTheme!.SecondaryColor!));
+        App.Current!.Resources["WhiteSmokeColor"] = new SolidColorBrush(Color.Parse(SelectedTheme!.WhiteSmokeColor!));
+        App.Current!.Resources["RaisinBlackColor"] = new SolidColorBrush(Color.Parse(SelectedTheme!.RaisinBlackColor!));
+        App.Current!.Resources["MintGreenColor"] = new SolidColorBrush(Color.Parse(SelectedTheme!.MintGreenColor!));
 
         Config!.Theme = prev_theme;
     }
