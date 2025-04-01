@@ -445,17 +445,26 @@ footer {
         }
 
         #features {
-            h2 {
-                font-size: 54px;
-            }
-
-            p {
-                font-size: 21px;
-            }
-
             #featuresBox {
                 gap: 5px;
                 grid-template-columns: repeat(auto-fit, 90vw);
+
+                div {
+                    h2 {
+                        font-size: 54px;
+                    }
+
+                    p {
+                        font-size: 21px;
+                        color: white;
+                        filter: none;
+                        text-shadow: 0px 6px 6px black;
+                    }
+                }
+
+                div::before {
+                    display: none;
+                }
             }
         }
 
