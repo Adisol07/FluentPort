@@ -17,6 +17,7 @@ body {
 
 html {
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -69,20 +70,21 @@ header::before {
 
 header.scrolled {
     background: #2d2a32ef center/cover;
+    border-bottom: 2px solid #3772FF;
 }
 
 header {
     position: fixed;
     width: 100vw;
-    border-bottom: 2px solid #3772FF;
     height: 84px;
+    border-bottom: 2px solid transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
     background: transparent;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.33s ease-in-out;
 
     a {
         display: flex;
@@ -220,7 +222,25 @@ main {
             gap: 50px;
             justify-content: center;
 
+            div::before {
+                position: absolute;
+                content: "";
+                z-index: -1;
+                background-color: darkgray;
+                border-style: solid;
+                border-width: 4px;
+                border-color: #111111;
+                opacity: 0.8;
+                top: -8px;
+                left: -8px;
+                right: -8px;
+                bottom: -8px;
+                border-radius: 32px;
+                transition-duration: 0.2s;
+            }
+
             div {
+                position: relative;
                 background-color: #2d2a32ef;
                 border-radius: 24px;
                 padding: 20px;
@@ -238,6 +258,7 @@ main {
                     font-size: 24px;
                     text-shadow: 0px 6px 6px black;
                     color: gray;
+                    filter: blur(2px);
                 }
             }
 
@@ -246,7 +267,12 @@ main {
 
                 p {
                     color: white;
+                    filter: none;
                 }
+            }
+
+            div:hover::before {
+                opacity: 0.1;
             }
         }
     }
