@@ -12,7 +12,7 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Center">
-                <TextBlock Foreground="White"
+                <TextBlock Foreground="{DynamicResource WhiteSmokeColor}"
                     FontSize="32"
                     FontWeight="Bold">You are on a mobile network!</TextBlock>
             </StackPanel>

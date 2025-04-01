@@ -62,12 +62,12 @@
             Selector="Button.RedBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="Red" />
             <Setter Property="BorderBrush" Value="Red" />
-            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
+            <Setter Property="Foreground" Value="White" />
         </Style>
         <Style
             Selector="Button.SelectedBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
-            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
+            <Setter Property="Foreground" Value="White" />
         </Style>
 
 
@@ -95,6 +95,9 @@
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="BorderBrush" Value="{DynamicResource PrimaryColor}" />
             <Setter Property="Cursor" Value="Hand" />
+        </Style>
+        <Style Selector="TextBox:focus, ComboBox:focus, TextBox:pointerover, ComboBox:pointerover">
+            <Setter Property="Foreground" Value="{DynamicResource WhiteSmokeColor}" />
         </Style>
 
         <Style Selector="CheckBox:unchecked /template/ Border#NormalRectangle">

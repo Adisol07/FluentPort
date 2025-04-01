@@ -14,7 +14,8 @@
                                         FontWeight="Medium"
                                         Text="Local Address: "
                                         VerticalAlignment="Center"
-                                        Grid.Column="0" />
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                                 <Grid Grid.Column="1"
                                         Margin="10 0 0 0"
                                         VerticalAlignment="Center">
@@ -32,7 +33,8 @@
                                         FontWeight="Medium"
                                         Text="Local Port: "
                                         VerticalAlignment="Center"
-                                        Grid.Column="0" />
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                                 <Grid Grid.Column="1"
                                         Margin="10 0 0 0"
                                         VerticalAlignment="Center">
@@ -52,7 +54,8 @@
                                         FontWeight="Medium"
                                         Text="Remote Server: "
                                         VerticalAlignment="Center"
-                                        Grid.Column="0" />
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                                 <Grid Grid.Column="1"
                                         Margin="10 0 0 0"
                                         VerticalAlignment="Center">
@@ -74,7 +77,8 @@
                                         FontWeight="Medium"
                                         Text="Remote Address: "
                                         VerticalAlignment="Center"
-                                        Grid.Column="0" />
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                                 <Grid Grid.Column="1"
                                         Margin="10 0 0 0"
                                         VerticalAlignment="Center">
@@ -95,7 +99,8 @@
                                         FontWeight="Medium"
                                         Text="Remote Port: "
                                         VerticalAlignment="Center"
-                                        Grid.Column="0" />
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                                 <Grid Grid.Column="1"
                                         Margin="10 0 0 0"
                                         VerticalAlignment="Center">
@@ -114,7 +119,8 @@
                                         FontWeight="Medium"
                                         Text="Created at: "
                                         VerticalAlignment="Center"
-                                        Grid.Column="0" />
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                                 <Grid Grid.Column="1"
                                         Margin="10 0 0 0"
                                         VerticalAlignment="Center">

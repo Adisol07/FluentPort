@@ -22,7 +22,8 @@
                                         FontWeight="Medium"
                                         Cursor="Hand"
                                         x:Name="LocalAddressText"
-                                        VerticalAlignment="Center" />
+                                        VerticalAlignment="Center"
+                                        Foreground="{DynamicResource WhiteSmokeColor}" />
                         </Button>
                         <Image x:Name="ArrowLeft"
                                 IsVisible="False"
@@ -75,7 +76,8 @@
                                                 Cursor="Hand"
                                                 x:Name="RemoteAddressText"
                                                 VerticalAlignment="Center"
-                                                HorizontalAlignment="Center" />
+                                                HorizontalAlignment="Center"
+                                                Foreground="{DynamicResource WhiteSmokeColor}" />
                                 </Button>
                                 <Image x:Name="LevelIndicatorPicture"
                                         Height="28"
