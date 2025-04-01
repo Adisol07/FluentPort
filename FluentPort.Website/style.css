@@ -237,11 +237,16 @@ main {
                 p {
                     font-size: 24px;
                     text-shadow: 0px 6px 6px black;
+                    color: gray;
                 }
             }
 
             div:hover {
                 background-color: #3772FF;
+
+                p {
+                    color: white;
+                }
             }
         }
     }
