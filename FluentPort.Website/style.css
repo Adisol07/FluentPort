@@ -56,6 +56,17 @@ a {
     color: white;
 }
 
+.disabledBtn {
+    cursor: auto;
+    background-color: gray;
+    border-color: black;
+    user-select: none;
+}
+
+.disabledBtn:hover {
+    background-color: darkgray;
+}
+
 header::before {
     position: absolute;
     content: "";
@@ -308,20 +319,37 @@ main {
             display: grid;
             gap: 15px;
             justify-content: center;
-            grid-template-columns: repeat(auto-fit, 300px);
-            margin-bottom: 10%;
+            grid-template-columns: 30% 30% 30%;
+            grid-template-rows: 30%;
             margin-top: 15px;
 
-            div {
+            a {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
+                justify-content: center;
+            }
 
-                h2 {
-                    font-size: 24px;
-                    margin-bottom: 5px;
-                    text-shadow: 0px 4px 4px black;
+            div {
+                height: 100%;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10%;
+
+                    h2 {
+                        font-size: 24px;
+                        margin-bottom: 5px;
+                        text-shadow: 0px 4px 4px black;
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+                        color: gray;
+                    }
                 }
             }
         }

@@ -10,7 +10,8 @@
                         FontSize="64"
                         FontWeight="Black"
                         Margin="0 0 0 5"
-                        HorizontalAlignment="Center" />
+                        HorizontalAlignment="Center"
+                        Foreground="{DynamicResource WhiteSmokeColor}" />
                 <TextBlock x:Name="VersionText"
                         FontSize="24"
                         FontWeight="Bold"

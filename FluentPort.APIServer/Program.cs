@@ -83,7 +83,7 @@ _ = Task.Run(async () =>
             foreach (Server server in ForwardingModel.Servers!)
                 if (usage.ContainsKey(server.Key!))
                     server.ActiveTunnels = usage[server.Key!];
-            if (backup != ForwardingModel.Servers)
+            if (backup.Equals(ForwardingModel.Servers))
                 Logger.Log(new Log(LogLevels.Information, "LOOP", "Reloaded servers"));
             backup.Clear();
             usage.Clear();
