@@ -10,6 +10,7 @@
                         FontSize="64"
                         FontWeight="Black"
                         Margin="0 0 0 10"
+                        Foreground="{DynamicResource WhiteSmokeColor}"
                         HorizontalAlignment="Center" />
                 <TextBox Watermark="Username"
                         x:Name="UsernameTB"
@@ -26,12 +27,14 @@
                         Classes="DefaultTB" />
                 <CheckBox x:Name="KeepSignedCKB"
                         IsChecked="True"
+                        Foreground="{DynamicResource WhiteSmokeColor}"
                         FontSize="18">Keep me signed in</CheckBox>
                 <CheckBox x:Name="TermsCKB">
                         <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center">
                                 <TextBlock Text="I agree to the "
                                         FontSize="18"
+                                        Foreground="{DynamicResource WhiteSmokeColor}"
                                         FontWeight="Medium"
                                         VerticalAlignment="Center" />
                                 <Button x:Name="TermsLink"
@@ -45,6 +48,7 @@
                                 </Button>
                                 <TextBlock Text=" and "
                                         FontSize="18"
+                                        Foreground="{DynamicResource WhiteSmokeColor}"
                                         VerticalAlignment="Center" />
                                 <Button x:Name="PrivacyLink"
                                         Click="PrivacyClicked"
@@ -72,6 +76,7 @@
                         HorizontalAlignment="Center">
                         <TextBlock Text="Do you already have an account? Login here: "
                                 FontSize="18"
+                                Foreground="{DynamicResource WhiteSmokeColor}"
                                 FontWeight="Medium"
                                 VerticalAlignment="Center" />
                         <Button x:Name="SignInLink"

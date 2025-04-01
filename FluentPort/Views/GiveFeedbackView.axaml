@@ -10,7 +10,8 @@
                         FontSize="64"
                         FontWeight="Black"
                         Margin="0 0 0 2"
-                        HorizontalAlignment="Center" />
+                        HorizontalAlignment="Center"
+                        Foreground="{DynamicResource WhiteSmokeColor}" />
                 <TextBlock Foreground="Gray"
                         FontSize="24"
                         FontWeight="Medium"

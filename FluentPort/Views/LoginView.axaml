@@ -10,7 +10,8 @@
                         FontSize="64"
                         FontWeight="Black"
                         Margin="0 0 0 10"
-                        HorizontalAlignment="Center" />
+                        HorizontalAlignment="Center"
+                        Foreground="{DynamicResource WhiteSmokeColor}" />
                 <TextBox Watermark="E-mail address"
                         x:Name="EmailTB"
                         MaxLength="250"
@@ -21,7 +22,8 @@
                         MaxLength="250"
                         Classes="DefaultTB" />
                 <CheckBox x:Name="KeepSignedCKB"
-                        IsChecked="True">Keep me signed in</CheckBox>
+                        IsChecked="True"
+                        Foreground="{DynamicResource WhiteSmokeColor}">Keep me signed in</CheckBox>
                 <Button Content="Sign In"
                         x:Name="LoginBtn"
                         HorizontalAlignment="Center"
@@ -39,7 +41,8 @@
                         <TextBlock Text="New here? Create an account here: "
                                 FontSize="18"
                                 FontWeight="Medium"
-                                VerticalAlignment="Center" />
+                                VerticalAlignment="Center"
+                                Foreground="{DynamicResource WhiteSmokeColor}" />
                         <Button x:Name="SignUpLink"
                                 Click="SignUpLinkClicked"
                                 Background="Transparent">
@@ -54,6 +57,7 @@
                         HorizontalAlignment="Center">
                         <TextBlock Text="Forgot your password? "
                                 FontSize="18"
+                                Foreground="{DynamicResource WhiteSmokeColor}"
                                 FontWeight="Medium"
                                 VerticalAlignment="Center" />
                         <Button x:Name="ResetPasswordLink"
