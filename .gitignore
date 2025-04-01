@@ -3,6 +3,9 @@ data/
 IpInfoToken.txt
 email_password.txt
 
+# Admin stuff
+FluentPort.AdminPanel/
+
 # Ignore Visual Studio specific files
 .vs/
 *.user
