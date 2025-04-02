@@ -7,7 +7,7 @@ namespace FluentPort.SDK;
 
 public class TcpMessage
 {
-    public string ProtocolVersion => "0.1.0";
+    public string ProtocolVersion => "0.1.2";
     public List<Result>? Results { get; set; }
 
     public TcpMessage()

@@ -341,6 +341,7 @@ public partial class MainWindow : Window
         try
         {
             using HttpClient client = new HttpClient();
+            client.Timeout = TimeSpan.FromSeconds(30);
             client.DefaultRequestHeaders.Add("User-Agent", "FluentPort SDK/1.0");
             HttpResponseMessage response = await client.GetAsync(Utils.API_SERVER + "/");
             if (response.IsSuccessStatusCode)
